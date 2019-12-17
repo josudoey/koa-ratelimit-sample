@@ -1,0 +1,27 @@
+{
+  "app.proxy": true,
+  "ratelimit.store.path": "./data-ratelimit",
+  "log4js": {
+    "appenders": {
+      "file": {
+        "type": "file",
+        "filename": "./log/server.log",
+        "maxLogSize": 104857600,
+        "numBackups": 3,
+        "compress": true
+      },
+      "stdout": {
+        "type": "stdout"
+      }
+    },
+    "categories": {
+      "default": {
+        "appenders": [
+          "stdout",
+          "file"
+        ],
+        "level": "debug"
+      }
+    }
+  }
+}
